@@ -6,29 +6,34 @@ import MovieDetails from "./pages/MovieDetails";
 import SearchResults from "./pages/SearchResults";
 import Wishlist from "./pages/Wishlist";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <Movies />,
+        },
+        {
+          path: "movie/:id",
+          element: <MovieDetails />,
+        },
+        {
+          path: "wishlist",
+          element: <Wishlist />,
+        },
+        {
+          path: "search",
+          element: <SearchResults />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <Movies />,
-      },
-      {
-        path: "movie/:id",
-        element: <MovieDetails />,
-      },
-      {
-        path: "wishlist",
-        element: <Wishlist />,
-      },
-      {
-        path: "search",
-        element: <SearchResults />,
-      },
-    ],
-  },
-]);
+    basename: "/-ITI-movie-app/",
+  }
+);
 
 export default router;
