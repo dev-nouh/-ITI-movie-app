@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Science+Gothic:wght@100..900&family=Strichpunkt+Sans:wght@400..900&display=swap');
+
+:root{
+  --bgcolor: #FFFFFF;
+  --mainColor : black ;
+  --lightBgcolor: #24beaf;
+  --bgTransparent:rgba( 36, 186 ,239  , 0.6) ;
+  --serchBg : #F3F1F1 ;
+  --borderColor : #a8a8a83d ;
+  --borderHeight : 1px ;
+  --econdFontColor : #949cb0 ;
+}
+
+body{
+  font-family: " Montserrat Alternates ", sans-serif !important;
+  background-color: var(--bgcolor) !important;
+  color: var(--mainColor) !important;
+}
+.badge{
+  background-color: #FFE353;
+  border-radius: 15px !important;
+}
+.custom-website-btn{
+  border: 1px solid  #FFE353 !important;
+  border-radius: 20px !important ;
+  background-color: #fff;
+}
+.custom-website-btn:hover{
+   border: 1px solid  #FFE353 !important;
+  border-radius: 20px !important ;
+  background-color: #fff !important;
+  color: black !important;
+}
+
+
+
+
+/* chatbot style */
+
+.chatbotBtn {
+  position: fixed !important;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: #FFE353;
+  border-radius: 50%;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.chatbotWindow {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  width: 350px;
+  height: 450px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 9998;
+}
+
+.chatInput {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+   direction: ltr;
+}
+
+.chatInput input {
+  flex: 1;
+  padding: 10px 12px;
+
+  border: 1px solid #FFE353;
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.chatInput input:focus {
+  border-color: #FFE353;
+}
+
+.chatInput button {
+  border: none;
+  border-radius: 8px;
+background-color: #FFE353;
+  padding: 10px 15px;
+
+  cursor: pointer;
+}
+.typing {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.typing span {
+  width: 7px;
+  height: 7px;
+  background-color: #777;
+  border-radius: 50%;
+
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.chatMessages {
+  direction: rtl;
+  text-align: right;
+}
+
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-6px);
+  }
+}

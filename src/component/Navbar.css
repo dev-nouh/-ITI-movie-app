@@ -1,0 +1,11 @@
+.dropdownBtn{
+    border: none !important;
+    color: black !important;
+}
+.dropdown-menu{
+    color: #fff;
+    border: none !important;
+}
+.navbar{
+ background-color: #FFE353;
+}
