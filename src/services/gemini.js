@@ -5,6 +5,7 @@ const ai = new GoogleGenAI({
 });
 
 export async function askGemini(message) {
+  console.log("My API Key is:", import.meta.env.VITE_GEMINI_API_KEY);
   const interaction = await ai.interactions.create({
     model: "gemini-3.8-flash",
     input: message,
