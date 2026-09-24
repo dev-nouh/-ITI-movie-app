@@ -9,3 +9,12 @@
 .navbar{
  background-color: #FFE353;
 }
+.languageDisabled {
+  color: #999 !important;
+  cursor: not-allowed;
+}
+
+.languageDisabled:hover {
+  background-color: #f1f1f1;
+  color: #777 !important;
+}

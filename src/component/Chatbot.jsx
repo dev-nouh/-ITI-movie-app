@@ -41,7 +41,6 @@ export default function Chatbot() {
   try {
     const result = await askGemini(userMessage);
 
-    // Add AI response
     setMessages((prev) => [
       ...prev,
       {
